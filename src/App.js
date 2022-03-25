@@ -6,8 +6,6 @@ import { useSelector } from 'react-redux'
 
 export default function App() {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
-  const [employees, setEmployees] = useState(employeeTableData);
-
 
   useEffect(() => {
     var el = document.getElementById("table");
@@ -29,7 +27,6 @@ export default function App() {
       <table className="table" id="table">
         <thead>
           <tr>
-            <th className="handle" ></th>
             <th className="handle" >אפשרויות</th>
             <th className="handle">סך הכל שעות</th>
             <th className="handle">שעות</th>
@@ -39,10 +36,9 @@ export default function App() {
           </tr>
         </thead>
         <tbody>
-          {employees?.map((employe, index) => (
+          {employeeTableData?.map((employe, index) => (
             <tr key={index}>
-             <th className="handle" scope="row">{index}</th>
-              <td ></td>
+              <th className="handle" scope="row">{index}</th>
               <td>{employe.sumHours}</td>
               <td>{employe.hours}</td>
               <td>{employe.overLimitHours}</td>
