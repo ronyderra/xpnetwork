@@ -4,7 +4,7 @@ import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from 'react-redux'
 
-export default function App() {
+const App = () => {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
 
   useEffect(() => {
@@ -19,7 +19,6 @@ export default function App() {
       console.log(from);
     });
   }, []);
-
 
   return (
     <div className="container">
@@ -51,3 +50,4 @@ export default function App() {
     </div>
   );
 }
+export default App;
