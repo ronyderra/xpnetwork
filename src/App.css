@@ -1,7 +1,51 @@
 .App {
   text-align: center;
-  font-family: sans-serif;
+}
+
+.table>:not(caption)>*>* {
+  border-spacing: 1px;
+  border-width: 2px;
+  border-color: white;
+}
+
+td, th {
+  border: 5px solid black;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.table-head {
+  margin-top: 15;
+}
+
+tbody {
+  background-color: #F6F6F6;
+  border-top: none !important;
+}
+
+th {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
+
+.noWidth {
+  width: 3%;
+}
+
+tr {
   text-align: center;
 }
 
-
+.nameImage {
+  padding-left: 30%;
+}
