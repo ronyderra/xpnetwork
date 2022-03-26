@@ -6,7 +6,7 @@ import "./App.css";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector, useDispatch } from 'react-redux'
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Button } from "react-bootstrap";
 import { addRow } from "./employeeSlice";
 
 const App = () => {
@@ -36,6 +36,7 @@ const App = () => {
             <th className="handle" >אפשרויות</th>
             <th className="handle">סך הכל שעות</th>
             <th className="handle">שעות</th>
+            <th className="handle">שעות ידניות</th>
             <th className="handle">שעות חריגות</th>
             <th className="handle">שם עובד</th>
             <th className="handle">מספר תז</th>
@@ -43,26 +44,27 @@ const App = () => {
         </thead>
         <tbody>
           {employeeTableData?.map((employe, index) => (
-            <tr key={index}>
+            <tr key={index} >
               <th className="handle" scope="row"><img src={Group73} /> </th>
               <td className="noWidth"><img src={barChart6} /></td>
               <td>{employe.sumHours}</td>
               <td>{employe.hours}</td>
               <td>{employe.overLimitHours}</td>
-              <td >{employe.name} <img src={Ellipse77} /></td>
-              <td>{employe.id}</td>
+              <td>{employe.manualHours}</td>
+              <td  >{employe.name} <span><img src={Ellipse77} /></span></td>
+              <td >{employe.id}</td>
             </tr>
           ))}
         </tbody>
       </Table>
-      <button onClick={() => dispatch(addRow({
+      <Button onClick={() => dispatch(addRow({
         "id": 316287341,
         "name": "שלמה",
         "overLimitHours": '4:00',
         "manualHours": '4:00',
         "hours": '155:00',
         "sumHours": '159:00'
-      }))}>Add Row</button>
+      }))}>Add Row</Button>
     </Container>
   );
 }
