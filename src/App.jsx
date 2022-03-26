@@ -1,5 +1,5 @@
 import React from 'react';
-import DndTable from './components/DndTable.jsx';
+import DndTable from './components/DndTable/DndTable';
 
 function App() {
     return (
