@@ -6,7 +6,7 @@ import "./App.css";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from 'react-redux'
-import Table from 'react-bootstrap/Table'
+import { Container,Table } from "react-bootstrap";
 
 const App = () => {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
@@ -25,7 +25,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="container">
+    <Container>
       <Table responsive id="table" size="sm">
         <thead>
           <tr>
@@ -52,7 +52,7 @@ const App = () => {
           ))}
         </tbody>
       </Table>
-    </div>
+    </Container>
   );
 }
 export default App;
