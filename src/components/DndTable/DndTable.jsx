@@ -1,18 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Ellipse from '../../assets/Ellipse.png'
 import ThreeDots from '../../assets/ThreeDots.png'
 import BarChart from '../../assets/BarChart.png'
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector, useDispatch } from 'react-redux'
-import { Container, Table, Button } from "react-bootstrap";
-import { addRow } from "../../redux/employeeSlice";
+import { Container, Table } from "react-bootstrap";
 import Column from '../Column/Column'
+import AddRowBtn from '../AddRowBtn/AddRowBtn'
 import "./DndTable.css";
 
 const DndTable = () => {
   const employeeTableData = useSelector((state) => state.employeeTable)
   const employeeColumnData = useSelector((state) => state.employeeColumn)
+
+  const [dataToAdd, setDataToAdd] = useState({
+    id: 316287341,
+    name: "שלמה",
+    overLimitHours: '4:00',
+    manualHours: '4:00',
+    hours: '155:00',
+    sumHours: '159:00'
+  })
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -30,7 +40,7 @@ const DndTable = () => {
       <h1 className="title">Drag and Drop React-Table</h1>
       <Table responsive id="dndTable" size="sm" >
         <thead>
-            <Column data={employeeColumnData} />
+          <Column data={employeeColumnData} />
         </thead>
         <tbody>
           {employeeTableData?.map((employee, index) => (
@@ -47,14 +57,7 @@ const DndTable = () => {
           ))}
         </tbody>
       </Table>
-      <Button onClick={() => dispatch(addRow({
-        id: 316287341,
-        name: "שלמה",
-        overLimitHours: '4:00',
-        manualHours: '4:00',
-        hours: '155:00',
-        sumHours: '159:00'
-      }))}>Add Row</Button>
+      <AddRowBtn data={dataToAdd} />
     </Container>
   );
 }
