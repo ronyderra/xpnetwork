@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import Ellipse from './assets/Ellipse.png'
-import ThreeDots from './assets/ThreeDots.png'
-import BarChart from './assets/BarChart.png'
+import Ellipse from '../assets/Ellipse.png'
+import ThreeDots from '../assets/ThreeDots.png'
+import BarChart from '../assets/BarChart.png'
 import "./DndTable.css";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector, useDispatch } from 'react-redux'
 import { Container, Table, Button } from "react-bootstrap";
-import { addRow } from "./redux/employeeSlice";
+import { addRow } from "../redux/employeeSlice";
 
 const DndTable = () => {
   const employeeTableData = useSelector((state) => state.employeeTable)
