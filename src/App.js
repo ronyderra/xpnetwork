@@ -5,11 +5,13 @@ import barChart6 from './images/barChart6.png'
 import "./App.css";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Container, Table } from "react-bootstrap";
+import { addRow } from "./employeeSlice";
 
 const App = () => {
-  const employeeTableData = useSelector((state) => state.employeeTable.data)
+  const employeeTableData = useSelector((state) => state.employeeTable)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const el = document.getElementById("table");
@@ -53,6 +55,14 @@ const App = () => {
           ))}
         </tbody>
       </Table>
+      <button onClick={() => dispatch(addRow({
+        "id": 316287341,
+        "name": "שלמה",
+        "overLimitHours": '4:00',
+        "manualHours": '4:00',
+        "hours": '155:00',
+        "sumHours": '159:00'
+      }))}>Add Row</button>
     </Container>
   );
 }

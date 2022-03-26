@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import employeeTableReducer from './employeeSlicer'
+import employeeTableReducer from './employeeSlice'
 
 export default configureStore({
     reducer: {

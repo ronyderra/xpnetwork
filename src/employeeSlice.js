@@ -6,7 +6,7 @@ export const employeeTableSlice = createSlice({
     name: 'employeeTable',
     initialState,
     reducers: {
-        addRow(state, action) {
+        addRow: (state, action) => {
             state.push(action.payload)
         },
     },
