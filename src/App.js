@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+import Ellipse77 from './images/Ellipse77.png'
+import Group73 from './images/Group73.png'
+import barChart6 from './images/barChart6.png'
 import "./App.css";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from 'react-redux'
+import Table from 'react-bootstrap/Table'
 
 const App = () => {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
@@ -22,10 +26,10 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>The Big Bang Task</h1>
-      <table className="table" id="table">
+      <Table responsive id="table" size="sm">
         <thead>
           <tr>
+            <th className="handle" ></th>
             <th className="handle" >אפשרויות</th>
             <th className="handle">סך הכל שעות</th>
             <th className="handle">שעות</th>
@@ -37,16 +41,17 @@ const App = () => {
         <tbody>
           {employeeTableData?.map((employe, index) => (
             <tr key={index}>
-              <th className="handle" scope="row">{index}</th>
+              <th className="handle" scope="row"><img src={Group73} /> </th>
+              <td className="noWidth"><img src={barChart6} /></td>
               <td>{employe.sumHours}</td>
               <td>{employe.hours}</td>
               <td>{employe.overLimitHours}</td>
-              <td>{employe.name}</td>
+              <td >{employe.name} <img src={Ellipse77} /></td>
               <td>{employe.id}</td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 }
