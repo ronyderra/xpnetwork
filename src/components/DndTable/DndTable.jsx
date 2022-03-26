@@ -23,8 +23,6 @@ const DndTable = () => {
     sumHours: '159:00'
   })
 
-  const dispatch = useDispatch()
-
   useEffect(() => {
     const el = document.getElementById("dndTable");
     tableDragger(el, {
