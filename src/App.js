@@ -26,6 +26,7 @@ const App = () => {
 
   return (
     <Container>
+      <h1 className="title">Drag and Drop React-Table</h1>
       <Table responsive id="table" size="sm">
         <thead>
           <tr>
