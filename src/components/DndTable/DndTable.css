@@ -35,23 +35,3 @@ th {
   font-size: 12px;
   line-height: 14px;
 }
-
-.noWidth {
-  width: 1px;
-}
-
-tr td:nth-child(n+7) {
-  text-align: right;
-}
-
-tr {
-  text-align: center;
-}
-
-.nameImage {
-  padding-left: 30%;
-}
-
-.barImage {
-  padding-left: 15%;
-}
