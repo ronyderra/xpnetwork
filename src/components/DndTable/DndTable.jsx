@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import Ellipse from '../../assets/Ellipse.png'
-import ThreeDots from '../../assets/ThreeDots.png'
-import BarChart from '../../assets/BarChart.png'
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector, useDispatch } from 'react-redux'
 import { Container, Table } from "react-bootstrap";
 import Column from '../Column/Column'
 import AddRowBtn from '../AddRowBtn/AddRowBtn'
+import Row from '../Row/Row'
 import "./DndTable.css";
 
 const DndTable = () => {
@@ -41,18 +39,7 @@ const DndTable = () => {
           <Column data={employeeColumnData} />
         </thead>
         <tbody>
-          {employeeTableData?.map((employee, index) => (
-            <tr key={index} >
-              <td className="handle" scope="row"><img src={ThreeDots} /></td>
-              <td className="noWidth"><img src={BarChart} /></td>
-              <td>{employee.sumHours}</td>
-              <td>{employee.hours}</td>
-              <td>{employee.overLimitHours}</td>
-              <td>{employee.manualHours}</td>
-              <td>{employee.name} <img className="barImage" src={Ellipse} /></td>
-              <td>{employee.id}</td>
-            </tr>
-          ))}
+          <Row data={employeeTableData} />
         </tbody>
       </Table>
       <AddRowBtn data={dataToAdd} />
