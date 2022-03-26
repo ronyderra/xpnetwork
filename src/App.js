@@ -48,8 +48,8 @@ const App = () => {
               <td>{employee.hours}</td>
               <td>{employee.overLimitHours}</td>
               <td>{employee.manualHours}</td>
-              <td  >{employee.name} <span><img src={Ellipse} /></span></td>
-              <td >{employee.id}</td>
+              <td>{employee.name} <span><img src={Ellipse} /></span></td>
+              <td>{employee.id}</td>
             </tr>
           ))}
         </tbody>
