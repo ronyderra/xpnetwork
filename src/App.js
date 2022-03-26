@@ -40,16 +40,16 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {employeeTableData?.map((employe, index) => (
+          {employeeTableData?.map((employee, index) => (
             <tr key={index} >
               <th className="handle" scope="row"><img src={ThreeDots} /></th>
               <td className="noWidth"><img src={BarChart} /></td>
-              <td>{employe.sumHours}</td>
-              <td>{employe.hours}</td>
-              <td>{employe.overLimitHours}</td>
-              <td>{employe.manualHours}</td>
-              <td  >{employe.name} <span><img src={Ellipse} /></span></td>
-              <td >{employe.id}</td>
+              <td>{employee.sumHours}</td>
+              <td>{employee.hours}</td>
+              <td>{employee.overLimitHours}</td>
+              <td>{employee.manualHours}</td>
+              <td  >{employee.name} <span><img src={Ellipse} /></span></td>
+              <td >{employee.id}</td>
             </tr>
           ))}
         </tbody>
