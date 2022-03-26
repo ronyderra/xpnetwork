@@ -1,4 +1,3 @@
-import { useState } from "react";
 import './Column.css'
 
 const Column = (props) => {
@@ -15,8 +14,6 @@ const Column = (props) => {
                         <th className="handle">{item.overHours}</th>
                         <th className="handle">{item.name}  </th>
                         <th className="handle">{item.id}</th>
-
-
                     </tr>
                 ))
             }
