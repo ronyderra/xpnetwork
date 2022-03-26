@@ -49,11 +49,11 @@ th {
   width: 1px;
 }
 
-tr td:nth-child(n+7) { /* I don't think they are 0 based */
+tr td:nth-child(n+7) {
   text-align: right;
 }
 
-tr{
+tr {
   text-align: center;
 }
 
@@ -61,7 +61,6 @@ tr{
   padding-left: 30%;
 }
 
-span{
-padding-left: 15%;
-  
+span {
+  padding-left: 15%;
 }

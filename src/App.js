@@ -42,7 +42,7 @@ const App = () => {
         <tbody>
           {employeeTableData?.map((employe, index) => (
             <tr key={index} >
-              <th className="handle" scope="row"><img src={ThreeDots} /> </th>
+              <th className="handle" scope="row"><img src={ThreeDots} /></th>
               <td className="noWidth"><img src={BarChart} /></td>
               <td>{employe.sumHours}</td>
               <td>{employe.hours}</td>
