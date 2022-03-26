@@ -14,7 +14,7 @@ const DndTable = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const el = document.getElementById("table");
+    const el = document.getElementById("dndTable");
     tableDragger(el, {
       mode: "free",
       onlyBody: false,
@@ -26,7 +26,7 @@ const DndTable = () => {
   return (
     <Container>
       <h1 className="title">Drag and Drop React-Table</h1>
-      <Table responsive id="table" size="sm" >
+      <Table responsive id="dndTable" size="sm" >
         <thead>
           <tr>
             <th className="handle"></th>
@@ -36,7 +36,7 @@ const DndTable = () => {
             <th className="handle">שעות ידניות</th>
             <th className="handle">שעות חריגות</th>
             <th className="handle">שם עובד</th>
-            <th className="handle sagiv">מספר תז</th>
+            <th className="handle">מספר תז</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@ const DndTable = () => {
               <td>{employee.hours}</td>
               <td>{employee.overLimitHours}</td>
               <td>{employee.manualHours}</td>
-              <td>{employee.name} <span><img src= {Ellipse}  /></span></td>
+              <td>{employee.name} <img className="barImage" src={Ellipse} /></td>
               <td>{employee.id}</td>
             </tr>
           ))}
