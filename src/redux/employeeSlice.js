@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import employeeTableData from '../emplyeesData'
+import employeeTableData from '../mock/emplyeesData'
 
 const initialState = employeeTableData;
 export const employeeTableSlice = createSlice({
