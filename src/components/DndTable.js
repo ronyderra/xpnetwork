@@ -55,12 +55,12 @@ const DndTable = () => {
         </tbody>
       </Table>
       <Button onClick={() => dispatch(addRow({
-        "id": 316287341,
-        "name": "שלמה",
-        "overLimitHours": '4:00',
-        "manualHours": '4:00',
-        "hours": '155:00',
-        "sumHours": '159:00'
+        id: 316287341,
+        name: "שלמה",
+        overLimitHours: '4:00',
+        manualHours: '4:00',
+        hours: '155:00',
+        sumHours: '159:00'
       }))}>Add Row</Button>
     </Container>
   );
