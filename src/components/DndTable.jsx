@@ -48,7 +48,7 @@ const DndTable = () => {
               <td>{employee.hours}</td>
               <td>{employee.overLimitHours}</td>
               <td>{employee.manualHours}</td>
-              <td>{employee.name} <span><img src= {bool ? Ellipse : 6767}  /></span></td>
+              <td>{employee.name} <span><img src= {Ellipse}  /></span></td>
               <td>{employee.id}</td>
             </tr>
           ))}
