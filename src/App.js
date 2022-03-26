@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Ellipse77 from './images/Ellipse77.png'
 import Group73 from './images/Group73.png'
 import barChart6 from './images/barChart6.png'
@@ -6,14 +6,14 @@ import "./App.css";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from 'react-redux'
-import { Container,Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 
 const App = () => {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
 
   useEffect(() => {
-    var el = document.getElementById("table");
-    var dragger = tableDragger(el, {
+    const el = document.getElementById("table");
+    const dragger = tableDragger(el, {
       mode: "free",
       onlyBody: false,
       dragHandler: ".handle",
