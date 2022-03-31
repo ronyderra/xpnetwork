@@ -1,4 +1,4 @@
-.noWidth {
+/* .noWidth {
   width: 1px;
 }
 
@@ -8,6 +8,9 @@ tr td:nth-child(n+7) {
 
 tr {
   text-align: center;
+  border-spacing: 1px;
+  border-width: 2px;
+  border-color: white;
 }
 
 .nameImage {
@@ -16,4 +19,21 @@ tr {
 
 .barImage {
   padding-left: 15%;
+} */
+
+
+td {
+  border: 3px solid white;
+
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+.barImage{
+  width: 0%;  
 }

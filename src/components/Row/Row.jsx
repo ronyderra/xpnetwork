@@ -8,15 +8,15 @@ const Row = (props) => {
         <>
             {
                 props.data?.map((employee, index) => (
-                    <tr key={index} >
-                        <td className="handle" scope="row"><img src={ThreeDots} /></td>
-                        <td className="noWidth"><img src={BarChart} /></td>
-                        <td>{employee.sumHours}</td>
-                        <td>{employee.hours}</td>
-                        <td>{employee.overLimitHours}</td>
-                        <td>{employee.manualHours}</td>
-                        <td>{employee.name} <img className="barImage" src={Ellipse} /></td>
-                        <td>{employee.id}</td>
+                    <tr className='tableRow' key={index} >
+                        <td className='center' scope="row"><img src={ThreeDots} /></td>
+                        <td className='center barImage'><img src={BarChart} /></td>
+                        <td className='center'>{employee.sumHours}</td>
+                        <td className='center'>{employee.hours}</td>
+                        <td className='center'>{employee.overLimitHours}</td>
+                        <td className='center'>{employee.manualHours}</td>
+                        <td className='right'>{employee.name} <img className="barImage" src={Ellipse} /></td>
+                        <td className='right'>{employee.id}</td>
                     </tr>
                 ))
             }

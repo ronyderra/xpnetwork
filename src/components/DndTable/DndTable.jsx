@@ -32,18 +32,20 @@ const DndTable = () => {
   }, []);
 
   return (
-    <Container>
+    <>
       <h1 className="title">Drag and Drop React-Table</h1>
-      <Table responsive id="dndTable" size="sm" >
-        <thead>
-          <Column data={employeeColumnData} />
-        </thead>
-        <tbody>
-          <Row data={employeeTableData} />
-        </tbody>
-      </Table>
+      <div className="container">
+        <table className="table" responsive id="dndTable" size="sm" >
+          <thead className="tableHead">
+            <Column data={employeeColumnData} />
+          </thead>
+          <tbody className="tableBody">
+            <Row data={employeeTableData} />
+          </tbody>
+        </table>
+      </div>
       <AddRowBtn data={dataToAdd} />
-    </Container>
+    </>
   );
 }
 export default DndTable;

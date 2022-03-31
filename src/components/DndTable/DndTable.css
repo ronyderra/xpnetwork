@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,4 +34,26 @@ th {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+} */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  margin-top: 5%;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+.tableHead {
+  
+  
+}
+
+.tableBody {
+  
+  background-color: #F6F6F6;
+  border-top: none !important;
 }
