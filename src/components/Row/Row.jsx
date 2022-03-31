@@ -9,7 +9,7 @@ const Row = (props) => {
             {
                 props.data?.map((employee, index) => (
                     <tr className='tableRow' key={index} >
-                        <td className='center' scope="row"><img src={ThreeDots} /></td>
+                        <td className="handle center" scope="row"><img src={ThreeDots} /></td>
                         <td className='center barImage'><img src={BarChart} /></td>
                         <td className='center'>{employee.sumHours}</td>
                         <td className='center'>{employee.hours}</td>
