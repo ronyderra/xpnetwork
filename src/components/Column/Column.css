@@ -1,11 +1,9 @@
-  .tableRow{
-  }
-  .handle{
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 12px;
-    line-height: 14.22px;
-    initial-letter: 3%;
-  }
+ .handle {
+   text-align: center;
+   font-family: 'Rubik', sans-serif;
+   font-style: normal;
+   font-weight: 100;
+   font-size: 12px;
+   line-height: 14.22px;
+   initial-letter: 3%;
+ }

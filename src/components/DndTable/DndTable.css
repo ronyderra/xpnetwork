@@ -1,41 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.title {
-  margin: 5%;
-  text-align: center;
-  cursor: pointer;
-  pointer-events: none;
-}
-
-table {
-  text-decoration: none;
-}
-
-.table>:not(caption)>*>* {
-  border-spacing: 1px;
-  border-width: 2px;
-  border-color: white;
-}
-
-.table-head {
-  margin-top: 15;
-}
-
-tbody {
-  background-color: #F6F6F6;
-  border-top: none !important;
-}
-
-th {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-} */
-
 .container {
   display: flex;
   justify-content: center;
@@ -45,11 +7,6 @@ th {
   margin-top: 5%;
   text-decoration: none;
   border: 2px solid white;
-}
-
-.tableHead {
-  
-  
 }
 
 .tableBody {
