@@ -1,11 +1,26 @@
+import React from 'react'
 import './Column.css'
 
-const Column = (props) => {
+interface Data {
+    option: string,
+    hoursSum: string,
+    hours: string,
+    manualHours: string,
+    overHours: string,
+    name: string,
+    id: string
+}
+
+interface Props {
+    data: [Data]
+}
+
+const Column: React.FC<Props> = ({ data }) => {
     return (
         <>
             {
-                props.data.map((item, index) => (
-                    <tr key={index}>
+                data.map((item, index) => (
+                    <tr className='tableRow' key={index}>
                         <th className="handle"></th>
                         <th className="handle">{item.option}</th>
                         <th className="handle">{item.hoursSum}</th>

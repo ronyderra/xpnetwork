@@ -3,8 +3,8 @@ import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector, useDispatch } from 'react-redux'
 import { Container, Table } from "react-bootstrap";
-import Column from '../Column/Column'
-import AddRowBtn from '../AddRowBtn/AddRowBtn'
+import Column from '../Column/Column.tsx'
+import AddRowBtn from '../AddRowBtn/AddRowBtn.tsx'
 import Row from '../Row/Row'
 import "./DndTable.css";
 
@@ -34,6 +34,7 @@ const DndTable = () => {
   return (
     <>
       <h1 className="title">Drag and Drop React-Table</h1>
+      <AddRowBtn data={dataToAdd} />
       <div className="container">
         <table className="table" responsive id="dndTable" size="sm" >
           <thead className="tableHead">
@@ -44,7 +45,6 @@ const DndTable = () => {
           </tbody>
         </table>
       </div>
-      <AddRowBtn data={dataToAdd} />
     </>
   );
 }

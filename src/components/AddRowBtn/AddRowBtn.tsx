@@ -1,12 +1,17 @@
 import { addRow } from "../../redux/employeeSlice";
 import { useDispatch } from 'react-redux'
 import { Button } from "react-bootstrap";
+import React from "react";
 
-const AddRowBtn = (props) => {
+interface Props {
+    data: {}
+}
+
+const AddRowBtn: React.FC<Props> = ({ data }) => {
     const dispatch = useDispatch()
     return (
         <>
-            <Button onClick={() => dispatch(addRow(props.data))}>Add Row</Button>
+            <Button onClick={() => dispatch(addRow(data))}>Add Row</Button>
         </>
     )
 }
