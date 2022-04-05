@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import tableDragger from "table-dragger";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useSelector, useDispatch } from 'react-redux'
+import { useAppSelector, useAppDispatch } from '../../redux/hooks'
 import { Container, Table } from "react-bootstrap";
-import Column from '../Column/Column.tsx'
-import AddRowBtn from '../AddRowBtn/AddRowBtn.tsx'
+import Column from '../Column/Column'
+import AddRowBtn from '../AddRowBtn/AddRowBtn'
 import Row from '../Row/Row'
 import "./DndTable.css";
 
-const DndTable = () => {
-  const employeeTableData = useSelector((state) => state.employeeTable)
-  const employeeColumnData = useSelector((state) => state.employeeColumn)
+const DndTable: React.FC = () => {
+  const employeeTableData = useAppSelector((state) => state.employeeTable)
+  const employeeColumnData = useAppSelector((state) => state.employeeColumn)
 
   const [dataToAdd, setDataToAdd] = useState({
     id: 316287341,
@@ -36,7 +36,7 @@ const DndTable = () => {
       <h1 className="title">Drag and Drop React-Table</h1>
       <AddRowBtn data={dataToAdd} />
       <div className="container">
-        <table className="table" responsive id="dndTable" size="sm" >
+        <table className="table" id="dndTable">
           <thead className="tableHead">
             <Column data={employeeColumnData} />
           </thead>
