@@ -4,6 +4,7 @@ import DndTable from './components/DndTable/DndTable';
 function App() {
     return (
         <div className="App">
+            
             <DndTable />
         </div>
     );
