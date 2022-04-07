@@ -1,6 +1,6 @@
 
 const employeeColumnData =
-    [{
+   [ {
         id: 'מספר תז',
         name: ' שם עובד',
         overHours: 'שעות חריגות',

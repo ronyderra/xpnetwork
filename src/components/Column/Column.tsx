@@ -2,13 +2,13 @@ import React from 'react'
 import './Column.css'
 
 interface Data {
-    option: string,
-    hoursSum: string,
-    hours: string,
-    manualHours: string,
-    overHours: string,
-    name: string,
-    id: string
+    option?: string,
+    hoursSum?: string,
+    hours?: string,
+    manualHours?: string,
+    overHours?: string,
+    name?: string,
+    id?: string
 }
 
 interface Props {
